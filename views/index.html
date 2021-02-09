@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Inicio | {{ app_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#003366">
+    <link rel="manifest" href="{{ app_url }}/manifest.webmanifest">
+	<link rel="icon" href="{{ app_url }}/assets/img/wi-brand-icon-panel.ico" />
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-fonticons.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-animate.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/wi-panel-beta.css" />
+    <link rel="apple-touch-icon" href="{{ app_url }}/assets/img/icons/apple-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="{{ app_name }} Pay">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="stylesheet" type="text/css" href="{{ app_url }}/vendor/numpad/numpad-light.css" />
+    
+</head>
+<body>
+
+    <div class="wi-loader-main">
+        <div class="wi-loader-content">
+            <img src="{{ app_url }}/assets/img/wi-brand-loader.svg" class="wi-loader-logo" />
+            <p>Espere un momento</p>
+        </div>
+    </div>
+
+    <div class="wi-p-header container-fluid">
+        <div class="wi-p-fila row justify-content-between">
+            <div class="wi-p-cols col-lg-auto col-sm-12">
+                <div class="wi-p-header-brand">
+                    <a href="{{ app_url }}/inicio/">
+                        <img src="{{ app_url }}/assets/img/qr-wallet-logo.svg" />
+                    </a>
+                </div>
+                <div class="wi-p-header-menu-toggle">
+                    <button class="wi-menu-toggle" data-value="wi-toggle-closed"> <i class="fas fa-bars"></i> 
+                    </button>
+                </div>
+            </div>
+            <div class="wi-p-cols col-lg-auto col-sm-12">
+                <div class="wi-p-header-user row">
+                    <div class="wi-p-header-user-info col-12"> 
+                        <a class="logout-link" href="{{ app_url }}/inicio/">
+                            <i class="fas fa-user"></i> <span>{{ user_name }}</span> <br>
+                        </a>
+                        <a class="logout-link" href="{{ app_url }}/salir">
+                            <i class="far fa-times-circle"></i> Salir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="wi-p-navigation">
+        <ul class="wi-main-nav">
+            <li class="wi-simple-option wi-active"> <a href="{{ app_url }}/inicio/"><i class="fas fa-tachometer-alt"></i> Inicio</a>
+        </ul>
+    </nav>
+
+    <main class="wi-layout">
+        <div class="wi-container">
+            <section class="wi-section-block">
+                <div class="wi-content-block wi-middle-centered">
+                    <div class="row" id="wi-scaner-main">
+
+                        <div class="col-md-6 offset-md-3">
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold">
+                                    <i class="lv-form-icon fas fa-wallet"></i> Sección
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2 style="color:var(--wi-green)">titulo</h2>
+                                            <p>parrafo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="{{ app_url }}/assets/js/libs/wi-jquery.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-popper.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-bootstrap.js"></script>
+    <script src="{{ app_url }}/assets/js/wi-panel-beta.js"></script>
+    
+</body>
+</html>

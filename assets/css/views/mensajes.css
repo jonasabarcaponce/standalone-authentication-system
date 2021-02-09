@@ -1,0 +1,160 @@
+button#dropdownMenuButton {
+    display: inherit;
+    height: 30px;
+    padding-top: 4px;
+    margin: auto;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 30px!important;
+}
+
+.wi-selector-group {
+    text-align: center;
+}
+.wi-selector-group i {
+    font-size: 2rem;
+    padding: 5px;
+}
+.wi-selector-group h3 {
+    font-size: 1.125rem;
+}
+.wi-selector-group p {
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+.list-group {
+    text-align: center;
+    font-size: 0.875rem;
+}
+.list-group-item {
+    color: var(--wi-gray-one);
+    transition: all 0.4s ease-out;
+}
+.list-group-item.wi-item-special {
+    padding-top: 20px;
+    height: 61.66px;
+}
+.list-group-item:hover { 
+    color: var(--wi-white-one);
+    background-color: var(--wi-green);
+    border-color: var(--wi-green);
+}
+
+.list-group-item.active {
+    background-color: var(--wi-blue);
+}
+
+#wiEdit,#wiAnswerEdit {
+    width: 424px;
+    min-height: 83px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: all 0.5s;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+#wiEdit:focus,#wiAnswerEdit:focus {
+    background-color: #fff;
+    border: 2px solid transparent;
+    box-shadow:         0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Tags Input para Bootstrap */
+.bootstrap-tagsinput {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    padding: 15px 10px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 20px;
+    width: 424px;
+    cursor: text;
+}
+.bootstrap-tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+.bootstrap-tagsinput input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: var(--wi-white-two);
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+.bootstrap-tagsinput.form-control input::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.bootstrap-tagsinput.form-control input:-ms-input-placeholder {
+    color: #fff;
+}
+.bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
+    color: #fff;
+}
+.bootstrap-tagsinput input:focus {
+    border: none;
+    box-shadow: none;
+}
+.bootstrap-tagsinput .tag {
+    word-break: keep-all;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    background-color: #39f;
+    height: 40px;
+    font-size: 0.875rem; 
+    font-weight: 300;
+    color: #fff;
+}
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 8px;
+    cursor: pointer;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "x";
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 5px;
+    height: 5px;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:hover {
+    background-color: #fff;
+    color: #39f;
+    border-radius: 100%;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+#redactarContainer,#formatoFileSelector,#filtrosContainer {
+    display: none;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 600px) {
+    .wi-input-block #wiEdit, .wi-input-block #wiAnswerEdit {
+        width: 100%;
+    }
+    .wi-input-block .bootstrap-tagsinput {
+        width: 100%;
+    }
+    .wi-selector-group {
+        padding-top: 20px;
+    }
+}

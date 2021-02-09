@@ -1,0 +1,10 @@
+.nav-pills .nav-link {
+    color: var(--wi-green);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--wi-green);
+}
+.card-header h2 button.btn-link {
+    color: var(--wi-green);
+}

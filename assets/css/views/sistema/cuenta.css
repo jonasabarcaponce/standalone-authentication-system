@@ -1,0 +1,148 @@
+/* View Styles: Login */
+.wi-login-layout {
+    display: block;
+    padding-top: 108px;
+    padding-bottom: 108px;
+    min-height: 100vh;
+    background: url('../../../img/login-bg.png') center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box {
+    background-color: var(--wi-white-one);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    border: 1px solid var(--wi-gray-two);
+    text-align: center;
+    height: auto;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-image img {
+    height: 57px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-title h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--wi-gray-black);
+    letter-spacing: -1px;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-title p {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--wi-gray-black);
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-input {
+    font-weight: 300!important;
+    font-size: 0.875rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-button { 
+    font-size: 0.937rem;
+    font-weight: 500;
+    border: none;
+    color: var(--wi-white-one);
+    background-color: var(--wi-blue);
+    border-radius: 30px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease-out;
+}
+
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-cta {
+    font-size: 0.937rem;
+    font-weight: 500;
+    border: none;
+    color: var(--wi-blue);
+    background-color: var(--wi-green);
+    border-radius: 30px;
+    width: 100%;
+    text-decoration: none;
+    height: 45px;
+    padding: 12px;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease-out;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-cta:hover {
+    background-color: var(--wi-gray-one);
+    color: var(--wi-white-one);
+}
+
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-help .wi-recover-cta {
+    font-size: 0.937rem;
+    font-weight: 500;
+    border: none;
+    color: var(--wi-white-one);
+    background-color: var(--wi-red);
+    border-radius: 30px;
+    width: 100%;
+    text-decoration: none;
+    height: 45px;
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease-out;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-help .wi-recover-cta:hover {
+    background-color: var(--wi-gray-one);
+}
+
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-button:hover {
+    background-color: var(--wi-gray-one);
+}
+
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form .wi-login-button:disabled { 
+    background-color: var(--wi-gray-two);
+    color: var(--wi-gray-black);
+    cursor: default;
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form small {
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 3px;
+    color: var(--wi-gray-one);
+}
+.wi-login-layout .wi-login-container .row .wi-login-box .wi-login-box-form small a{
+    font-weight: 500;
+    color: var(--wi-gray-one);
+}
+.g-recaptcha {
+    transform:scale(0.90);
+    transform-origin:0 0;
+    margin-bottom: 5px!important;
+}
+
+/*** Inicia responsive View Styles: Login  ***/
+@media only screen and (min-width: 250px) and (max-width: 600px) {
+    .wi-login-layout .wi-login-container .row .wi-login-box {
+        border-radius: 0px;
+        border: none;
+    } 
+    .g-recaptcha {
+        transform: scale(0.72);
+        transform-origin:33% 0;
+        margin-bottom: 5px!important;
+    }
+}
+
+
+/*** Termina responsive View Styles: Login  ***/

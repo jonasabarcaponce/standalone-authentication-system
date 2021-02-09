@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Numpad</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="https://quire.mx/panel/assets/css/libs/wi-bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://quire.mx/panel/assets/css/wi-panel-beta.css" />
+    <link rel="stylesheet" type="text/css" href="https://quire.mx/panel/assets/css/views/sistema/cuenta.css" />
+
+    <link rel="stylesheet" href="numpad-light.css"/>
+    <script src="numpad.js"></script>
+    
+  </head>
+  <body>
+    <!-- (B) INPUT FIELDS -->
+    Field A: <input type="text" id="demoA"/>
+    <br><br>
+    Field B: <textarea id="demoB"></textarea>
+    
+    <!-- (C) ATTACH NUMPAD -->
+    <script>
+    window.addEventListener("load", function(){
+      // BASIC
+      numpad.attach({target: "demoA"});
+      // WITH OPTIONS
+      numpad.attach({
+        target: "demoB",
+        max: 10,
+        decimal: false
+      });
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+button#dropdownMenuButton {
+    display: inherit;
+    height: 30px;
+    padding-top: 4px;
+    margin: auto;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 30px!important;
+}
+a#deleteGroupConection {
+    display: block;
+    height: 30px;
+    padding-top: 4px;
+    margin: auto;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+#wiLoadDomicilio {
+    display: none;
+}
+
+.nav-tabs .nav-link {
+    color: var(--wi-gray-one);
+}
+
+.nav-tabs .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--wi-green);
+}

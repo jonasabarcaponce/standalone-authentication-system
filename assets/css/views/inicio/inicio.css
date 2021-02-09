@@ -1,0 +1,13 @@
+.wi-wizard-step {
+    margin-bottom: 20px;
+}
+.wi-wizard-step.step-done .card {
+    background-color: #f4f7f9;
+    border-color: transparent;
+}
+.wi-wizard-step.step-done .card h5 {
+    text-decoration-line: line-through;
+}
+.wi-wizard-step.step-done .card a {
+    display: none;
+}

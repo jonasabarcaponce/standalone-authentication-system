@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Entrar | {{ app_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#003366">
+    <link rel="manifest" href="{{ app_url }}/manifest.webmanifest">
+	<link rel="icon" href="{{ app_url }}/assets/img/wi-brand-icon-panel.ico" />
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-fonticons.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-animate.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/wi-panel-beta.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/views/sistema/cuenta.css" />
+    <link rel="apple-touch-icon" href="{{ app_url }}/assets/img/icons/apple-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="{{ app_name }} Pay">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+    <main class="wi-login-layout">
+        <div class="wi-login-container container">
+            <div class="row">
+                <div class="wi-login-box col-lg-4 col-md-6 col-sm-12 mx-auto">
+                    <div class="wi-login-box-image">
+                        <img src="{{ app_url }}/assets/img/qr-wallet-logo.svg" alt="Entrar en {{ app_name }}, Estamos listos." />
+                    </div>
+                    <div class="wi-login-box-title">
+                        <h1>Identificate</h1>
+                        <p>Entra para <br>editar tu negocio</p>
+                    </div>
+                    <form action="{{ app_url }}/entrar" method="post" class="wi-login-box-form form-row">
+                        <div class="col-12">
+                            <input name="user-identification-whatsapp" class="form-control wi-login-input" type="text" placeholder="WhatsApp" pattern="^[0-9]{10}$" title="Debes ingresar tu WhatsApp a 10 dígitos" required autocomplete="tel" autofocus>
+                        </div>
+                        <div class="col-12">
+                            <input name="user-identification-password" class="wi-login-input form-control" type="password" placeholder="Contraseña" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{8,}$" title="Como mínimo 8 caracteres, al menos debe contener una letra minúscula y un número. Puede contener caracteres especiales" required autocomplete="current-password">
+                        </div>
+                        <div class="col-12">
+                            <button name="user-identification" class="wi-login-button" type="submit">Entrar</button> <p style="margin-top: -10px; margin-bottom: 10px; font-size: 0.75rem; font-weight: lighter;">o también puedes</p> <a href="{{ app_url }}/registrate" class="wi-login-cta">Registrar tu negocio</a> 
+                        </div> 
+                        <small>Al continuar, aceptas las <a href="#">condiciones del servicio</a> y la <a href="#">política de privacidad</a> de {{ app_name }}.</small>
+                    </form>
+                    <div class="wi-login-box-help">
+                        <div class="wi-l-box-help-divider"></div><a href="{{ app_url }}/recuperar" class="wi-recover-cta">¿Olvidaste tu contraseña?</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="{{ app_url }}/assets/js/libs/wi-jquery.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-popper.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-bootstrap.js"></script>
+    <script src="{{ app_url }}/assets/js/wi-panel-beta.js"></script>
+    <script src="{{ app_url }}/assets/js/views/sistema/cuenta.js"></script>
+
+</body>
+</html>

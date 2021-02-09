@@ -1,0 +1,13 @@
+RewriteEngine On    # Turn on the rewriting engine
+
+# RewriteCond %{HTTPS} off
+# RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^inicio/?$ index.php
+
+RewriteRule ^entrar/?$ cuenta-entrar.php
+RewriteRule ^registrate/?$ cuenta-registro.php
+
+RewriteRule ^salir/?$ cuenta-salir.php
+RewriteRule ^activar/([a-fA-F0-9]{32})/?$ cuenta-activar.php?user-access=$1
+RewriteRule ^primeros-pasos/?$ cuenta-completar.php

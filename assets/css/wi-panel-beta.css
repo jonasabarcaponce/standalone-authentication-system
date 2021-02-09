@@ -1,0 +1,733 @@
+/*** Componentes de Quire   ***/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
+:root {
+    --wi-green: #ffff00;
+    --wi-green-two: #003366;
+    --wi-blue: #003366;
+    --wi-white-one: #ffffff;
+    --wi-white-two: #f4f7f9;
+    --wi-gray-black: #0f110c;
+    --wi-gray-one: #333;
+    --wi-gray-two: #ccc;
+    --wi-red: rgb(190, 25, 25);
+}
+html { 
+    font-size: 16px; 
+}
+body { 
+    font-family: 'Montserrat', sans-serif!important; 
+    font-weight: 500; 
+    background-color: var(--wi-p-bg-white-alterno);
+    --ck-z-default: 100;
+    --ck-z-modal: calc( var(--ck-z-default) + 999 );
+}
+.ck-content .media {
+    display: block;
+}
+
+/** Inicia: Reiniciar Webkit **/
+input[type="color"] { 
+    -webkit-appearance: none; height: auto; 
+}
+input[type="color"]::-webkit-color-swatch-wrapper { 
+    padding: 0; 
+}
+input[type="color"]::-webkit-color-swatch { 
+    border: none; 
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; margin: 0; 
+}
+/** Termina: Reiniciar Webkit **/
+
+/** Inicia: Divisores WI de contenido **/
+.wi-divider-center { 
+    display: block; 
+    width: 300px; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    height: 3px; 
+    border-bottom: 3px solid green; 
+    border-image-source: linear-gradient(45deg, var(--wi-blue) 0%, var(--wi-green) 80%); border-image-slice: 20;
+}
+.wi-divider-center-transparent { 
+    display: block; 
+    width: 300px; 
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    height: 3px; 
+    border-bottom: 3px solid transparent; 
+}
+.wi-l-box-help-divider { 
+    border-bottom: 1px solid var(--wi-gray-two); 
+    margin-top: 8px; 
+    margin-bottom: 8px; 
+}
+/** Termina: Divisores WI de contenido **/
+
+/** Inicia: Botones WI **/
+.btn {
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 0.875rem;
+    border-radius: 20px;
+}
+.btn i {
+    font-size: 0.875rem;
+    margin-right: 5px;
+}
+
+/** Termina: Botones WI **/
+
+/** Inicia: Popups de WI **/
+.modal-title img {
+    width: 27px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.wi-preview-image {
+    border: 5px solid var(--wi-green);
+    border-radius: 100%;
+    background-color: var(--wi-green-two);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.modal-footer a {
+    color: #fff!important; 
+    padding-top:8px;
+    padding-top:8px;
+}
+/** Termina: Popups de WI **/
+
+/** Inicia: Mensajes Globales WI **/
+.alert {
+    border-radius: 40px;
+}
+.alert i.alert-icon-one {
+    float: left;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+.alert i.alert-icon-two {
+    float: left;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+/** Terminan Mensajes Globales WI **/
+
+/*** Inicia: Header Panel WI ***/
+.wi-p-header {
+    position: fixed;
+    display: block;
+    z-index: 2;
+    height: 84px;
+    width: 100%;
+    top: 0px;
+    background-color: var(--wi-white-one);
+    box-shadow:         0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+}
+    .wi-p-header .wi-p-fila {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        height: 100%;
+    }
+    .wi-p-header .wi-p-fila .wi-p-cols {
+        padding: 0;
+    }
+
+    /* Inicia: Branding en Header Panel WI*/
+    .wi-p-header .wi-p-header-brand {
+        width: 252px;
+        height: 84px;
+        margin-top: -21px;
+        margin-bottom: -21px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-left: 105px;
+    }
+    .wi-p-header .wi-p-header-brand img {
+        position: absolute;
+        height: 100%;
+    }
+        /* Escondemos el botón menu del escritorio  */
+        .wi-p-header-menu-toggle {
+            display: none;
+        }
+
+    /* Inicia: Usuario en Header Panel WI*/
+    .wi-p-header .wi-p-header-user {
+        width: 302px;
+        height: 84px;
+        margin-top: -21px;
+        margin-bottom: -21px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+        .wi-p-header .wi-p-header-user-image img {
+            width: 40px;
+            height: 40px;
+            float: right;
+            border-radius: 100%;
+            border: 3px solid var(--wi-green);
+            background-color: var(--wi-green-two);
+            margin-top: 2px;
+        }
+        .wi-p-header .wi-p-header-user-info a {
+            color: var(--wi-blue);
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.2;
+            text-decoration: none;
+            transition: all 0.4s;
+        }
+        .wi-p-header .wi-p-header-user-info a span {
+            font-weight: 700;
+        }
+        .wi-p-header .wi-p-header-user-info a:hover {
+            color: var(--wi-green);
+        }
+
+    /*** Inicia: responsive de Hader Panel WI ***/
+        @media only screen and (min-width: 250px) and (max-width: 600px) {
+            .wi-divider-center { 
+                width:250px;
+            }
+            .wi-p-header .wi-p-header-brand {
+                width: 110px;
+                display: inline-block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 30px;
+            }
+            .wi-p-header .wi-p-header-brand img {
+                height: 50px;
+            }
+            .wi-p-header .wi-p-header-user {
+                display: none;
+            }
+            .wi-p-header-menu-toggle {
+                display: block;
+                width: 150px;
+                float: right;
+            }
+            .wi-p-header-menu-toggle button {
+                outline: none;
+                float: right;
+                height: 43px;
+                width: 43px;
+                background-color: #fff;
+                border: 2px solid var(--wi-gray-two);
+                color: var(--wi-gray-two);
+                border-radius: 100%;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                margin-right: 30px;
+            }
+            .wi-p-header-menu-toggle .wi-p-header-user-image {
+                float: left;
+            }
+            .wi-p-header-menu-toggle .wi-p-header-user-image img {
+                width: 43px;
+                height: 43px;
+                margin-top: 0px;
+            }
+        }
+        @media only screen and (min-width: 601px) and (max-width: 992px)  {
+            .wi-p-header .wi-p-header-brand {
+                width: 110px;
+                display: inline-block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 30px;
+            }
+            .wi-p-header .wi-p-header-brand img {
+                height: 50px;
+            }
+            .wi-p-header .wi-p-header-user {
+                display: none;
+            }
+            .wi-p-header-menu-toggle {
+                display: block;
+                width: 150px;
+                float: right;
+            }
+            .wi-p-header-menu-toggle button {
+                outline: none;
+                float: right;
+                height: 43px;
+                width: 43px;
+                background-color: #fff;
+                border: 2px solid var(--wi-gray-two);
+                color: var(--wi-gray-two);
+                border-radius: 100%;
+                padding-top: 3px;
+                margin-right: 30px;
+            }
+            .wi-p-header-menu-toggle .wi-p-header-user-image {
+                float: left;
+            }
+            .wi-p-header-menu-toggle .wi-p-header-user-image img {
+                width: 43px;
+                height: 43px;
+                margin-top: 0px;
+            }
+        }
+    /*** Termina: responsive de Header Panel WI ***/
+
+/*** Termina: Header Panel WI ***/ 
+
+
+/*** Inicia: Navegación Panel WI ***/
+.wi-p-navigation {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    height: 100%;
+    width: 252px;
+    top: 84px;
+    background-color: var(--wi-white-one);
+    padding-top: 20px!important;
+}
+
+    /* Selector de secciones */
+    .wi-main-option {
+        background-color: transparent;
+        transition: all 0.4s;
+    }
+    .wi-main-option:hover {
+        background-color: var(--wi-white-one);
+    }
+        .wi-simple-option {
+            background-color: transparent;
+            transition: all 0.4s;
+        }
+
+    /* Navegacion principal */
+    .wi-p-navigation .wi-main-nav {
+        padding-left: 0px;
+    }
+        .wi-p-navigation .wi-main-nav > li.wi-simple-option{
+            list-style: none;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        .wi-p-navigation .wi-main-nav > li{
+            list-style: none;
+            padding-top: 3px;
+            padding-bottom: 7px;
+            line-height: 1.7;
+        }
+        .wi-p-navigation .wi-main-nav > li a {
+            display: block;
+            font-size: 1.125rem;
+            color: var(--wi-blue);
+            padding: 10px 25px;
+        }
+        .wi-p-navigation .wi-main-nav > li a:hover, .wi-p-navigation .wi-main-nav > li a:hover > i {
+            text-decoration: none;
+            color: var(--wi-green)!important;
+        }
+        .wi-p-navigation .wi-main-nav > li a i {
+            font-size: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 35px;
+            margin-bottom: 5px;
+            margin-top: 3px;
+            color: var(--wi-blue);
+            width: 25px;
+            height: 25px;
+        }
+
+    .wi-p-navigation .wi-main-nav .wi-simple-option.wi-active > a {
+        color: var(--wi-blue);
+        border-left: 2px solid var(--wi-blue);
+    }
+
+    .wi-p-navigation .wi-main-nav .wi-simple-option > a:hover,
+    .wi-p-navigation .wi-main-nav .wi-simple-option.wi-active > a:hover {
+        color: var(--wi-green);
+        border-left: 2px solid var(--wi-green);
+    }
+
+
+
+    /*** Inicia: responsive de Navegación Panel WI ***/
+    @media only screen and (min-width: 250px) and (max-width: 600px) {
+        .wi-p-navigation {
+            transition: all 0.4s ease-out;
+            margin-left: -252px;
+            padding-top: 6px;
+        }
+        .wi-p-navigation.collapsed {
+            transition: all 0.4s ease-out;
+            margin-left: 0px;
+        }
+        .wi-p-navigation .wi-main-nav > li.wi-simple-option{
+            padding-top: 2px;
+        }
+        .wi-p-navigation .wi-main-nav > li a { 
+            font-size: 1rem;
+        }
+        .wi-p-navigation .wi-secondary-nav > li a { 
+            line-height: 1.45;
+        }
+    }
+    @media only screen and (min-width: 560px) and (max-width: 992px) and (orientation: landscape) {
+        .wi-p-navigation {
+            transition: all 0.4s ease-out;
+            margin-left: -252px;
+            padding-top: 6px;
+            padding-bottom: 100px;
+            overflow: auto;
+        }
+    }
+    @media only screen and (min-width: 601px) and (max-width: 992px)  {
+        .wi-p-navigation {
+            transition: all 0.4s ease-out;
+            margin-left: -252px;
+            padding-top: 6px;
+        }
+        .wi-p-navigation.collapsed {
+            transition: all 0.4s ease-out;
+            margin-left: 0px;
+        }
+        .wi-p-navigation .wi-main-nav > li.wi-simple-option{
+            padding-top: 2px;
+        }
+        .wi-p-navigation .wi-main-nav > li a { 
+            font-size: 1rem;
+        }
+        .wi-p-navigation .wi-secondary-nav > li a { 
+            line-height: 1.45;
+        }
+    }
+    /*** Termina: responsive de Navegación Panel WI ***/
+
+/*** Termina: Navegacion Panel WI ***/
+
+
+/*** Inicia: Contenedor Base Panel WI ***/
+    /* Espaciados verticales */
+    .wi-p-field-row {
+        padding-bottom: 35px;
+    }
+    .wi-layout .wi-p-main-content-title {
+        padding-bottom: 20px;
+    }
+
+/*** Inicia: Lienzo principal de WI ***/ 
+
+    .wi-layout {
+        position: static;
+        display: block;
+        z-index: 0;
+        margin-left: 252px;
+        margin-top: 84px;
+        min-height: 86.5vh;
+        height: auto;
+        background-color: var(--wi-white-two);
+    }
+
+    .wi-layout .wi-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .wi-layout .wi-container .wi-sub-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    section.wi-section-block {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    section.wi-section-block:first-of-type {
+        padding-top: 5px;
+    }
+
+    h1.wi-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-top: 8px;
+        color: var(--wi-blue);
+        margin: 0;
+    }
+
+    h2.wi-title {
+        font-size: 1.000rem;
+        font-weight: 700;
+        color: #000;
+        margin: 0;
+    }
+    h3.wi-title {
+        font-size: 0.937rem;
+        font-weight: 500;
+        color: var(--wi-green);
+        margin: 0;
+    }
+    p.wi-text {
+        font-size: 1rem; 
+        font-weight: 300;
+        color: var(--wi-gray-one);
+        margin: 0;
+    }
+    .wi-content-block {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .wi-content-block .wi-title, .wi-content-block .wi-text {
+        padding-bottom: 5px;
+    }
+
+    .wi-input-block {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .wi-input-block input {
+        height: 40px;
+        width: 304px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 0.875rem;
+        font-weight: 300;
+        background: transparent;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        transition: all 0.5s;
+        outline: none;
+    }
+    .wi-input-block input:focus {
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-shadow:         0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .wi-input-block .input-group-text {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .modal-input-block input {
+        width:100%;
+    }
+
+    /** Selectores de WI **/
+    .wi-input-block select {
+        height: 40px!important;
+        width: 304px;
+        padding-left: 15px;
+        padding-right: 15px!important;
+        font-size: 0.875rem;
+        font-weight: 300;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        transition: all 0.5s;
+        background-color: transparent;
+        outline: none;
+    }
+    .wi-input-block select:focus {
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-shadow:         0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .modal-input-block select {
+        width:100%;
+    }
+
+    /* Checkbox de WI  */
+    .wi-input-block .custom-control {
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .wi-input-block .custom-control .custom-control-label {
+        font-size: 0.875rem; 
+        font-weight: 300;
+        color: var(--wi-gray-one);
+    }
+
+    /* Subidor de archivos */
+    .wi-input-block .custom-file {
+        width: 304px;
+        height: 40px;
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+    .wi-input-block .custom-file:hover {
+        background-color: #fff;
+        box-shadow:         0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+    }
+    .wi-input-block .custom-file .custom-file-label {
+        width: 304px;
+        height: 40px;
+        padding-left: 15px;
+        padding-top: 8px;
+        font-size: 0.875rem; 
+        font-weight: 300;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .wi-input-block .custom-file .custom-file-label:after {
+        height: auto;
+        padding: 8px;
+        font-size: 0.875rem; 
+        font-weight: 300;
+        color: #fff;
+        content: "Elige";
+        background-color: #ccc;
+        border-left: 1px solid #ccc;
+        border-radius: 20px 15px 15px 20px;
+    }
+
+    /*** Inicia: Responsive de Lienzo principal de WI ***/
+    @media only screen and (min-width: 250px) and (max-width: 600px) {
+        .wi-layout {
+            margin-left: 0px;
+        }
+        .wi-layout .wi-container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .wi-layout .wi-container .wi-sub-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .wi-input-block input, .wi-input-block select {
+            width: 100%;
+        }
+        .wi-input-block .custom-file .custom-file-label, .wi-input-block .custom-file {
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: 601px) and (max-width: 992px)  {
+        .wi-layout {
+            margin-left: 0px;
+        }
+        .wi-layout .wi-container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .wi-layout .wi-container .wi-sub-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        .table-responsive {
+            overflow: visible;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+        }
+    }
+
+    /*** Termina: Responsive de Lienzo principal de WI ***/
+
+/*** Termina: Lienzo principal de WI ***/ 
+
+table {
+    font-size: 0.875rem;
+}
+.wi-layout-navigation {
+    list-style: none;
+    float: right;
+}
+.wi-layout-navigation li {
+    display: inline-block;
+    margin-left: 5px;
+}
+.modal-content {
+    border-radius: 20px;
+}
+.wi-loader-main {
+    position: absolute;
+    top: 0;
+    z-index: 999; 
+    height: 100%;
+    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-color: #fff;
+    color: #fff;
+}
+.wi-loader-content {
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+.wi-loader-content p {
+    font-size: 1.2rem;
+    color: var(--wi-blue)
+}
+.wi-loader-content .wi-loader-logo {
+    max-height: 100px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: transparent;
+    color: var(--wi-blue);
+}
+.lv-form-icon {
+    margin-right: 5px;
+}
+
+#qr-code canvas {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#qr-code {
+    padding: 15px;
+}
+
+.wi-wizard-step {
+    margin-bottom: 20px;
+}
+.wi-wizard-step.step-done .card {
+    background-color: var(--wi-gray-two);
+    border-color: transparent;
+}
+.wi-wizard-step.step-done .card h5 {
+    text-decoration-line: line-through;
+}
+.wi-wizard-step.step-done .card a {
+    display: none;
+}
+button.quire-button {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--wi-white-one);
+    background-color: var(--wi-green);
+    padding: 12.5px 22.5px;
+    border-radius: 30px;
+    text-decoration: none;
+    height: auto;
+}
+button.quire-button:hover {
+    color: var(--wi-green);
+    background-color: var(--wi-gray-one);
+}
+button.quire-button:disabled {
+    color: var(--wi-gray-two);
+    background-color: var(--wi-white-two);
+}
+
+
+.logout-link i {
+    opacity: 0;
+    margin-left: -25px;
+    transition: all 0.5s;
+}
+
+.logout-link:hover i {
+    opacity: 1;
+    margin-left: 0px;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Primeros pasos | {{ app_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#003366">
+    <link rel="manifest" href="{{ app_url }}/manifest.webmanifest">
+	<link rel="icon" href="{{ app_url }}/assets/img/wi-brand-icon-panel.ico" />
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-fonticons.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/libs/wi-animate.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app_url }}/assets/css/wi-panel-beta.css" />
+    <link rel="apple-touch-icon" href="{{ app_url }}/assets/img/icons/apple-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="{{ app_name }} Pay">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+
+    <div class="wi-loader-main">
+        <div class="wi-loader-content">
+            <img src="{{ app_url }}/assets/img/wi-brand-loader.svg" class="wi-loader-logo" />
+            <p>Espere un momento</p>
+        </div>
+    </div>
+
+    <div class="wi-p-header container-fluid">
+        <div class="wi-p-fila row justify-content-between">
+            <div class="wi-p-cols col-lg-auto col-sm-12">
+                <div class="wi-p-header-brand">
+                    <a href="{{ app_url }}/inicio/">
+                        <img src="{{ app_url }}/assets/img/qr-wallet-logo.svg" />
+                    </a>
+                </div>
+                <div class="wi-p-header-menu-toggle">
+                    <button class="wi-menu-toggle" data-value="wi-toggle-closed"> <i class="fas fa-bars"></i> 
+                    </button>
+                </div>
+            </div>
+            <div class="wi-p-cols col-lg-auto col-sm-12">
+                <div class="wi-p-header-user row">
+                    <div class="wi-p-header-user-info col-12"> 
+                        <a class="logout-link" href="{{ app_url }}/inicio/">
+                            <i class="fas fa-user"></i> <span>Bienvenido</span> <br>
+                        </a>
+                        <a class="logout-link" href="{{ app_url }}/salir">
+                            <i class="far fa-times-circle"></i> Salir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="wi-p-navigation">
+        <ul class="wi-main-nav">
+            <li class="wi-simple-option wi-active"> <a href="{{ app_url }}/inicio/"><i class="fas fa-tachometer-alt"></i> Inicio</a>
+        </ul>
+    </nav>
+
+    <main class="wi-layout">
+        <div class="wi-container">
+            <section class="wi-section-block">
+
+                <div class="wi-content-block">
+                    <h1 class="wi-title">Primeros pasos</h1>
+                    <p class="mb-4">Bienvenido a {{ app_name }}. Para poder comenzar a cobrar necesitamos que sigas los pasos a continuación.</p>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-12 mb-4">
+
+                            <!-- Project Card Example --> 
+                            <div class="row">
+                            
+                                <div class="col-lg-4 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body row">
+                                            <div class="col-2">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                Crea tu cuenta  <div class="text-white-50 small">Listo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% if user_status == 1 %}
+
+                                <div class="col-lg-4 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body row">
+                                            <div class="col-2">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                Completa tu información <div class="text-white-50 small">Listo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 mb-4">
+                                    <div class="card bg-white text-black shadow">
+                                        <div class="card-body row">
+                                            <div class="col-2">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                Confirma tu correo <div class="text-black-50 small">En progreso</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% else %}
+
+                                <div class="col-lg-4 mb-4">
+                                    <div class="card bg-white text-black shadow">
+                                        <div class="card-body row">
+                                            <div class="col-2">
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                Completa tu información <div class="text-black-50 small">En progreso</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mb-4">
+                                    <div class="card bg-secondary text-white shadow">
+                                        <div class="card-body row">
+                                            <div class="col-2">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                Confirma tu correo <div class="text-white-50 small">Pendiente</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% endif %}
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if user_status == 2 %}
+
+                    <form action="{{ app_url }}/primeros-pasos" method="post">
+                
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- Basic Card Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold"><i class="lv-form-icon fas fa-user" ></i> Nombre completo</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input name="user-data-name" class="form-control lv-booking-form-inputs" type="text" required autocomplete="name" placeholder="Escribe tu nombre aquí" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <!-- Basic Card Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold"><i class="lv-form-icon fas fa-envelope"></i> Correo electrónico</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input name="user-data-mail" class="form-control lv-booking-form-inputs" type="email" required autocomplete="email" placeholder="Escribe tu correo aquí" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <!-- Basic Card Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold"><i class="lv-form-icon fas fa-store"></i> Nombre de tu negocio</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input name="business-data-name" class="form-control lv-booking-form-inputs" type="text" required placeholder="Escribe tu nombre aquí" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-block quire-button" name="user-data-post"><i class="lv-form-icon fas fa-arrow-right" style="margin-right: 5px; font-size: 1.2rem;"></i> Continuar </button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    {% endif %}
+
+                </div>
+
+                
+            </section>
+        </div>
+    </main>
+
+    <script src="{{ app_url }}/assets/js/libs/wi-jquery.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-popper.js"></script>
+    <script src="{{ app_url }}/assets/js/libs/wi-bootstrap.js"></script>
+    <script src="{{ app_url }}/assets/js/wi-panel-beta.js"></script>
+
+</body>
+</html>
