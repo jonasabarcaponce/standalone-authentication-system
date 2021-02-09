@@ -1,4 +1,4 @@
-# Standalone Authentication System
+# Standalone authentication system
 
 It is a code system that I have created whose structure facilitates the rapid development of a complete user system without the need to depend on any other known system or library.
 
